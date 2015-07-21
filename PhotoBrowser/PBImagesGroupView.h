@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface PBImagesGroupView : UIView
-
+@property (nonatomic,strong) NSArray *photoItemArray;
 @end

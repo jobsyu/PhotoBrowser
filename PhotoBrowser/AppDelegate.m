@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "PBNavigationController.h"
+#import "PBTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    PBTableViewController *tableVc = [[PBTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    PBNavigationController *nav = [[PBNavigationController alloc] initWithRootViewController:tableVc];
+    self.window.rootViewController = nav;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

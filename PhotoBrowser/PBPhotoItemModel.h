@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface PBPhotoItemModel : NSObject
-
+@property (nonatomic,copy) NSString *thumbnail_pic;
 @end
